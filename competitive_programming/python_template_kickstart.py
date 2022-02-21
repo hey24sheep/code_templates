@@ -15,20 +15,20 @@ from sys import stdin, stdout
 sys.setrecursionlimit(100000000)
 # 10**9+7 prime
 mod = 1000000007
+mod1 = 998244353
 # helpers
 ceil = lambda x: int(x) if (x == int(x)) else int(x) + 1
 ceildiv = lambda x, d: x // d if (x % d == 0) else x // d + 1
 # fast input
 input = stdin.readline
 get_input = lambda: stdin.readline().strip()
-get_int = lambda: int(stdin.readline().strip())
-get_list = lambda: stdin.readline().strip().split()
-get_int_list = lambda: list(map(int, stdin.readline().strip().split()))
-get_float_list = lambda: list(map(float, stdin.readline().strip().split()))
+get_int = lambda: int(get_input())
+get_list = lambda: get_input().split()
+get_int_list = lambda: list(map(int, get_list()))
+get_float_list = lambda: list(map(float, get_list()))
 # fast output
-output_float = lambda val: stdout.write(f"{val:.2f}\n")
-output = lambda val: stdout.write(str(val) + "\n")
-flush = lambda: stdout.flush()
+output_float = lambda val: (stdout.write(f"{val:.2f}\n") and stdout.flush())
+output = lambda val: (stdout.write(str(val) + "\n") and stdout.flush())
 
 # solve
 testcases = get_int()

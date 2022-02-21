@@ -17,7 +17,7 @@ import random
 sys.setrecursionlimit(100000000)
 # 10**9+7 prime
 mod = 1000000007
-
+mod1 = 998244353
 
 class IOHelper:
 

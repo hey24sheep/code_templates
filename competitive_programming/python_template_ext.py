@@ -6,7 +6,9 @@
 #
 # Description : A small and quick template file for competitve programming
 # --------------------------------------------------------------------------------------
-import sys, math, bisect
+import sys, io, os, math, bisect
+from collections import Counter, defaultdict, OrderedDict, deque
+from itertools import permutations, combinations
 from sys import stdin, stdout
 
 # set max recurssion limit
@@ -17,6 +19,12 @@ mod1 = 998244353
 # helpers
 ceil = lambda x: int(x) if (x == int(x)) else int(x) + 1
 ceildiv = lambda x, d: x // d if (x % d == 0) else x // d + 1
+def isprime(n):
+    if (n == 1 or n == 0): return False
+    for i in range(2, int(n**(1 / 2)) + 1):
+        if (n % i == 0):
+            return False
+    return True
 # fast input
 input = stdin.readline
 get_input = lambda: stdin.readline().strip()
@@ -31,10 +39,9 @@ output = lambda val: (stdout.write(str(val) + "\n") and stdout.flush())
 # solve
 testcases = get_int()
 
-for t in range(testcases):
+for t in range(1, testcases + 1):
     n = get_input()
+    s = get_input()
 
-    result = ''
-    output(f'{result}')
-
-    # output(f'Case #{testcases+1}: {result}'
+    # print result
+    # print(f'Case #{t}: {result}')
